@@ -9,6 +9,7 @@ class ClientServiceController extends Controller
 {
     public function index()
     {
-        $service = ClientService::all();
+        $services = ClientService::all();
+        return view('clienthome', compact('services'));
     }
 }
